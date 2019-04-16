@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/16 15:18:21 by ceugene           #+#    #+#             */
-/*   Updated: 2019/04/16 15:38:35 by ceugene          ###   ########.fr       */
+/*   Updated: 2019/04/16 16:54:16 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@
 int		main(int argc, char **argv)
 {
 	argc = 1;
-	printf("%ocoucou\n %c", 100, '\a');
+	printf("%+-10.1dcoucou\n %c", 123456, '\a');
 	return (1);
 }

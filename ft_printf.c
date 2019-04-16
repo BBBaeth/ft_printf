@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/16 15:18:12 by ceugene           #+#    #+#             */
-/*   Updated: 2019/04/16 15:19:39 by ceugene          ###   ########.fr       */
+/*   Updated: 2019/04/16 17:38:19 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,24 @@
 
 int		ft_start_printing(const char *format, ...)
 {
+	int		start;
 	int		select;
 	int		len;
 
+	start = 0;
 	select = -1;
 	len = ft_strlen(format);
 	while (++select < len && format[select])
 	{
 		while (format[select] && format[select] != '%')
-		{
-			ft_putchar(format[select]);
 			select++;
-		}
+		write(1, format + start, select - start);
+		start += select - start;
 		if (format[select] == '%')
-			break ;
+		{
+			select += ft_jump_arg();
+			ft_display_arg();
+		}
 	}
 	return (1);
 }
