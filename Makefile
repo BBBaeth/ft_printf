@@ -6,7 +6,7 @@
 #    By: ceugene <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/16 11:04:25 by ceugene           #+#    #+#              #
-#    Updated: 2018/03/12 13:52:00 by ceugene          ###   ########.fr        #
+#    Updated: 2019/04/16 15:08:18 by ceugene          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ SRCS =		ft_bzero.c			\
 			ft_isdigit.c		\
 			ft_isascii.c		\
 			ft_strlen.c			\
+			../ft_printf.c		\
 
 SRCO =		ft_bzero.o			\
 			ft_memset.o			\
@@ -33,6 +34,7 @@ SRCO =		ft_bzero.o			\
 			ft_isdigit.o		\
 			ft_isascii.o		\
 			ft_strlen.o			\
+			../ft_printf.o		\
 
 FLAGS = -Wall -Wextra -Werror
 

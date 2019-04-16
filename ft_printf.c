@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/16 15:18:12 by ceugene           #+#    #+#             */
+/*   Updated: 2019/04/16 15:19:39 by ceugene          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "./srcs/libftprintf.h"
 
-int		ft_start_printing(int fd, const char *format, ...)
+int		ft_start_printing(const char *format, ...)
 {
 	int		select;
 	int		len;
@@ -29,7 +41,7 @@ int		ft_printf(const char *format, ...)
 	if (format)
 	{
 		va_start(args, format);
-		lenght = ft_start_printing(1, format, args);
+		lenght = ft_start_printing(format, args);
 		va_end(args);
 	}
 	return (lenght);
